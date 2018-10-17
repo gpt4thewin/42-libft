@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/16 18:29:07 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/16 18:29:07 by juazouz          ###   ########.fr       */
+/*   Created: 2018/10/17 00:40:49 by juazouz           #+#    #+#             */
+/*   Updated: 2018/10/17 00:40:49 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void  *ft_memalloc(size_t size)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	void *ptr;
+	unsigned int	i;
+	unsigned int	c1;
+	unsigned int	c2;
 
-	ptr = malloc(ptr);
-	if (ptr != NULL)
-		ft_strclr(ptr);
-	return (NULL);
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		c1 = s1[i];
+		c2 = s2[i];
+		if (c1 != c2)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

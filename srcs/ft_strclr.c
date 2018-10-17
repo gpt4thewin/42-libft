@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/16 18:29:07 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/16 18:29:07 by juazouz          ###   ########.fr       */
+/*   Created: 2018/10/17 00:27:07 by juazouz           #+#    #+#             */
+/*   Updated: 2018/10/17 00:27:07 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void  *ft_memalloc(size_t size)
+void	ft_strclr(char *s)
 {
-	void *ptr;
+	int i;
 
-	ptr = malloc(ptr);
-	if (ptr != NULL)
-		ft_strclr(ptr);
-	return (NULL);
+	i = 0;
+	while (s[i] != NULL)
+	{
+		s[i] = NULL;
+		i++;
+	}
 }
