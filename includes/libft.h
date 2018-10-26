@@ -16,17 +16,11 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 /*
 *	Types.
 */
-
-typedef struct	s_list
-{
-   void				*content;
-   size_t			content_size;
-   struct s_list	*next;
-}				t_list;
 
 /*
 *	Macros.
@@ -66,6 +60,7 @@ int				ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 int				ft_strlen(char *str);
 char			*ft_strcpy(char *dest, char *src);
 char			*ft_strncpy(char *dest, char *src, unsigned int n);
+int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strdup(char *src);
 char			*ft_strcat(char *dest, char *src);
 char			*ft_strncat(char *dest, char *src, int nb);
@@ -81,6 +76,7 @@ int				ft_islower(int c);
 int				ft_isupper(int c);
 int				ft_isalnum(int c);
 int				ft_isprint(int c);
+int				ft_isspace(int c);
 
 int				ft_atoi(char *str);
 

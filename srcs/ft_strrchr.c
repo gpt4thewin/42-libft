@@ -19,10 +19,10 @@ char	*ft_strrchr(const char *str, int character)
 
 	found = NULL;
 	i = 0;
-	while (((unsigned char*)str)[i] != NULL)
+	while (((char*)str)[i] != '\0')
 	{
 		if (((unsigned char*)str)[i] == (unsigned char)character)
-			found = (str + i);
+			found = (char*)(str + i);
 		i++;
 	}
 	return (found);

@@ -74,9 +74,26 @@ SRC =	srcs/ft_atoi.c \
 		srcs/ft_strsub.c \
 		srcs/ft_strtrim.c \
 		srcs/ft_tolower.c \
-		srcs/ft_toupper.c
+		srcs/ft_toupper.c \
+		srcs/list/ft_create_elem.c \
+		srcs/list/ft_list_at.c \
+		srcs/list/ft_list_clear.c \
+		srcs/list/ft_list_find.c \
+		srcs/list/ft_list_foreach.c \
+		srcs/list/ft_list_foreach_if.c \
+		srcs/list/ft_list_last.c \
+		srcs/list/ft_list_merge.c \
+		srcs/list/ft_list_push_back.c \
+		srcs/list/ft_list_push_front.c \
+		srcs/list/ft_list_remove_if.c \
+		srcs/list/ft_list_reverse.c \
+		srcs/list/ft_list_size.c \
+		srcs/list/ft_list_sort.c \
+		srcs/list/ft_list_swap.c \
+		srcs/list/ft_sorted_list_insert.c \
+		srcs/list/ft_sorted_list_merge.c
 
-OBJ =	ft_atoi.o \		
+OBJ =	ft_atoi.o \
 		ft_bzero.o \
 		ft_isalnum.o \
 		ft_isalpha.o \
@@ -85,7 +102,7 @@ OBJ =	ft_atoi.o \
 		ft_islower.o \
 		ft_isprint.o \
 		ft_isupper.o \
-		ft_itoa.o
+		ft_itoa.o \
  		ft_memalloc.o \
 		ft_memccpy.o \
 		ft_memchr.o \
@@ -128,13 +145,33 @@ OBJ =	ft_atoi.o \
 		ft_strsub.o \
 		ft_strtrim.o \
 		ft_tolower.o \
-		ft_toupper.o
+		ft_toupper.o \
+		ft_create_elem.o \
+		ft_list_at.o \
+		ft_list_clear.o \
+		ft_list_find.o \
+		ft_list_foreach.o \
+		ft_list_foreach_if.o \
+		ft_list_last.o \
+		ft_list_merge.o \
+		ft_list_push_back.o \
+		ft_list_push_front.o \
+		ft_list_remove_if.o \
+		ft_list_reverse.o \
+		ft_list_size.o \
+		ft_list_sort.o \
+		ft_list_swap.o \
+		ft_sorted_list_insert.o \
+		ft_sorted_list_merge.o
 
 TARGET = libft.a
 
-all:
-	gcc -Wall -Werror -Wextra -c $(SRC) -I includes
+$(TARGET):
+	gcc -Wall -Werror -Wextra -I includes -c $(SRC)
 	ar rc $(TARGET) $(OBJ)
+	ranlib $(TARGET)
+
+all: $(TARGET)
 
 clean:
 	rm -f $(OBJ)

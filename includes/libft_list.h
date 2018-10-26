@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#ifndef LIBFT_LIST_H
+# define LIBFT_LIST_H
 
 /*
 *	Types.

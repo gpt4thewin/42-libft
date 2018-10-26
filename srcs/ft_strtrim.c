@@ -17,7 +17,7 @@ static int	isblank(int c)
 	return (c == '\n' || c == ' ' || c == '\t');
 }
 
-static int	ntoskip(char *s)
+static int	ntoskip(char const *s)
 {
 	int		n;
 
@@ -27,7 +27,7 @@ static int	ntoskip(char *s)
 	return (n);
 }
 
-static int	trimlen(char *s)
+static int	trimlen(char const *s)
 {
 	int		i;
 	int		len;
@@ -55,7 +55,7 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	i = 0;
 	i += ntoskip(s);
-	ft_strncpy(result, s + i, len);
+	ft_strncpy(result, (char*)(s + i), len);
 
 	return (result);
 }

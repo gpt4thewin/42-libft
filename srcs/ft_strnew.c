@@ -20,4 +20,5 @@ char	*ft_strnew(size_t size)
 	if (result == NULL)
 		return (NULL);
 	ft_memset(result, 0, size);
+	return (result);
 }

@@ -12,25 +12,7 @@
 
 #include "libft.h"
 
-static int		get_len(int n)
-{
-	int	len;
-
-	len = 1;
-	if (n < 0)
-	{
-		len++;
-		n = -n;
-	}
-	while (n >= 10)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
-
-static void	putc(char c, char *s, int *len)
+static void	append(char c, char *s, int *len)
 {
 	if (s != NULL)
 	{
@@ -46,7 +28,7 @@ static void	putnbr(int nb, char *s, int *len)
 	if (nb < 0)
 	{
 		tmp = (unsigned int)-nb;
-		putc('-', s, len);
+		append('-', s, len);
 	}
 	else
 	{
@@ -56,14 +38,14 @@ static void	putnbr(int nb, char *s, int *len)
 	{
 		putnbr((int)(tmp / 10), s, len);
 	}
-	putc(tmp % 10 + '0', s, len);
+	append(tmp % 10 + '0', s, len);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	
+
 	len = 0;
 	putnbr(n, NULL, &len);
 	str = ft_strnew(len + 1);
