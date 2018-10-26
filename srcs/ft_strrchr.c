@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int character)
 {
-   size_t	i;
-   char		*found;
+	size_t	i;
+	char		*found;
 
 	found = NULL;
 	i = 0;
