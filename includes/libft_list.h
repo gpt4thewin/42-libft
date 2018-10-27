@@ -55,6 +55,6 @@ void	ft_sorted_list_merge(t_list **begin_list1,
 *	Non standard functions.
 */
 
-void		ft_list_swap(t_list **begin_list, t_list *previous, t_list *current);
+void	ft_list_swap(t_list **begin_list, t_list *previous, t_list *current);
 
 #endif

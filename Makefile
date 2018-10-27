@@ -22,6 +22,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+CC = gcc
+
+FLAGS = -Wall -Wextra -Werror -I includes
+
+TARGET = libft.a
+
 SRC =	srcs/ft_atoi.c \
 		srcs/ft_bzero.c \
 		srcs/ft_isalnum.c \
@@ -164,10 +170,8 @@ OBJ =	ft_atoi.o \
 		ft_sorted_list_insert.o \
 		ft_sorted_list_merge.o
 
-TARGET = libft.a
-
 $(TARGET):
-	gcc -Wall -Werror -Wextra -I includes -c $(SRC)
+	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(TARGET) $(OBJ)
 	ranlib $(TARGET)
 

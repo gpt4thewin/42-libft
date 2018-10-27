@@ -14,12 +14,12 @@
 
 void  *ft_memmove(void *dst, const void *src, size_t num)
 {
-   void *buf;
+	void *buf;
 
-   buf = malloc(num);
-   ft_memcpy(buf, src, num);
-   ft_memcpy(dst, buf, num);
-   free(buf);
+	buf = malloc(num);
+	ft_memcpy(buf, src, num);
+	ft_memcpy(dst, buf, num);
+	free(buf);
 
-   return (dst);
+	return (dst);
 }
