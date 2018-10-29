@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 13:45:22 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 18:16:34 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/10/29 13:27:00 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_create_elem(void *data)
 	t_list *result;
 
 	result = malloc(sizeof(t_list));
+	if (result == NULL)
+		return (NULL);
 	result->data = data;
 	result->next = NULL;
 	return (result);

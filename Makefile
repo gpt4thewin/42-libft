@@ -28,59 +28,60 @@ FLAGS = -Wall -Wextra -Werror -I includes
 
 TARGET = libft.a
 
-SRC =	srcs/ft_atoi.c \
-		srcs/ft_bzero.c \
-		srcs/ft_isalnum.c \
-		srcs/ft_isalpha.c \
-		srcs/ft_isascii.c \
-		srcs/ft_isdigit.c \
-		srcs/ft_islower.c \
-		srcs/ft_isprint.c \
-		srcs/ft_isupper.c \
-		srcs/ft_itoa.c \
-		srcs/ft_memalloc.c \
-		srcs/ft_memccpy.c \
-		srcs/ft_memchr.c \
-		srcs/ft_memcmp.c \
-		srcs/ft_memcpy.c \
-		srcs/ft_memdel.c \
-		srcs/ft_memmove.c \
-		srcs/ft_memset.c \
-		srcs/ft_putchar.c \
-		srcs/ft_putchar_fd.c \
-		srcs/ft_putendl.c \
-		srcs/ft_putendl_fd.c \
-		srcs/ft_putnbr.c \
-		srcs/ft_putnbr_fd.c \
-		srcs/ft_putstr.c \
-		srcs/ft_strcat.c \
-		srcs/ft_strchr.c \
-		srcs/ft_strclr.c \
-		srcs/ft_strcmp.c \
-		srcs/ft_strcpy.c \
-		srcs/ft_strdel.c \
-		srcs/ft_strdup.c \
-		srcs/ft_strequ.c \
-		srcs/ft_striter.c \
-		srcs/ft_striteri.c \
-		srcs/ft_strjoin.c \
-		srcs/ft_strlcat.c \
-		srcs/ft_strlen.c \
-		srcs/ft_strmap.c \
-		srcs/ft_strmapi.c \
-		srcs/ft_strncat.c \
-		srcs/ft_strncmp.c \
-		srcs/ft_strncpy.c \
-		srcs/ft_strnequ.c \
-		srcs/ft_strnew.c \
-		srcs/ft_strnstr.c \
-		srcs/ft_strrchr.c \
-		srcs/ft_strsplit.c \
-		srcs/ft_strstr.c \
-		srcs/ft_strsub.c \
-		srcs/ft_strtrim.c \
-		srcs/ft_tolower.c \
-		srcs/ft_toupper.c \
+SRC =	srcs/string/ft_atoi.c \
+		srcs/string/ft_isalnum.c \
+		srcs/string/ft_isalpha.c \
+		srcs/string/ft_isascii.c \
+		srcs/string/ft_isdigit.c \
+		srcs/string/ft_islower.c \
+		srcs/string/ft_isprint.c \
+		srcs/string/ft_isupper.c \
+		srcs/string/ft_itoa.c \
+		srcs/string/ft_strcat.c \
+		srcs/string/ft_strchr.c \
+		srcs/string/ft_strclr.c \
+		srcs/string/ft_strcmp.c \
+		srcs/string/ft_strcpy.c \
+		srcs/string/ft_strdel.c \
+		srcs/string/ft_strdup.c \
+		srcs/string/ft_strequ.c \
+		srcs/string/ft_striter.c \
+		srcs/string/ft_striteri.c \
+		srcs/string/ft_strjoin.c \
+		srcs/string/ft_strlcat.c \
+		srcs/string/ft_strlen.c \
+		srcs/string/ft_strmap.c \
+		srcs/string/ft_strmapi.c \
+		srcs/string/ft_strncat.c \
+		srcs/string/ft_strncmp.c \
+		srcs/string/ft_strncpy.c \
+		srcs/string/ft_strnequ.c \
+		srcs/string/ft_strnew.c \
+		srcs/string/ft_strnstr.c \
+		srcs/string/ft_strrchr.c \
+		srcs/string/ft_strsplit.c \
+		srcs/string/ft_strstr.c \
+		srcs/string/ft_strsub.c \
+		srcs/string/ft_strtrim.c \
+		srcs/string/ft_tolower.c \
+		srcs/string/ft_toupper.c \
+		srcs/memory/ft_memalloc.c \
+		srcs/memory/ft_memccpy.c \
+		srcs/memory/ft_memchr.c \
+		srcs/memory/ft_memcmp.c \
+		srcs/memory/ft_memcpy.c \
+		srcs/memory/ft_memdel.c \
+		srcs/memory/ft_memmove.c \
+		srcs/memory/ft_memset.c \
+		srcs/memory/ft_bzero.c \
+		srcs/output/ft_putchar.c \
+		srcs/output/ft_putchar_fd.c \
+		srcs/output/ft_putendl.c \
+		srcs/output/ft_putendl_fd.c \
+		srcs/output/ft_putnbr.c \
+		srcs/output/ft_putnbr_fd.c \
+		srcs/output/ft_putstr.c \
+		srcs/output/ft_putstr_fd.c \
 		srcs/list/ft_create_elem.c \
 		srcs/list/ft_list_at.c \
 		srcs/list/ft_list_clear.c \
@@ -124,6 +125,7 @@ OBJ =	ft_atoi.o \
 		ft_putnbr.o \
 		ft_putnbr_fd.o \
 		ft_putstr.o \
+		ft_putstr_fd.o \
 		ft_strcat.o \
 		ft_strchr.o \
 		ft_strclr.o \

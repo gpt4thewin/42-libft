@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/16 18:29:07 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/16 18:29:07 by juazouz          ###   ########.fr       */
+/*   Created: 2018/10/16 18:47:41 by juazouz           #+#    #+#             */
+/*   Updated: 2018/10/16 18:47:41 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_bzero(void *s, int n)
 {
-	void	*ptr;
-
-	ptr = malloc(size);
-	if (ptr != NULL)
-		ft_memset(ptr, 0, size);
-	return (NULL);
+	ft_memset(s, 0, n);
 }
