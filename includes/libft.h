@@ -80,6 +80,8 @@ int				ft_isspace(int c);
 
 int				ft_atoi(char *str);
 
+char			**ft_strtok(char *str, char *delimiter);
+
 /*
 *	Non libc.
 */
