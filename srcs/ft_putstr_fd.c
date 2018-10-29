@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/17 17:37:54 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 17:37:54 by juazouz          ###   ########.fr       */
+/*   Created: 2018/10/29 13:13:09 by juazouz           #+#    #+#             */
+/*   Updated: 2018/10/29 13:13:09 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void ft_putstr_fd(char c, int fd)
 {
-	ft_putnbr_fd(nb, 1);
+	int i;
+
+	i = 0;
+	while (str[i] != 0)
+	{
+		ft_putchar(str[i], fd);
+		i++;
+	}
 }

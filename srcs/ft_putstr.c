@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 20:32:22 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 17:32:58 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/10/29 13:14:19 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	ft_putstr_fd(str, 1);
 }
