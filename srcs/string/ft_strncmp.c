@@ -6,13 +6,9 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 16:05:09 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 18:53:25 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:09:58 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-*	Note : Facultatif
-*/
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

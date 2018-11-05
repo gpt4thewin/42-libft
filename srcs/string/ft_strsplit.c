@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:32:36 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 01:32:36 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:10:50 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,23 @@ static int		get_word_count(char *str, char *charset)
 	return (i);
 }
 
-char	**ft_strsplit(char *str, char *charset)
+static char		*try_create_word(char *str, char *charset, int *word_len)
+{
+	char	*result;
+
+	*word_len = get_word_len(str, charset);
+	if (*word_len > 0)
+	{
+		result = malloc(*word_len + 1);
+		ft_strncpy(result, str, *word_len);
+		*(result + (*word_len)) = '\0';
+		str += (*word_len);
+		return (result);
+	}
+	return (NULL);
+}
+
+char			**ft_strsplit(char *str, char *charset)
 {
 	int		i;
 	int		word_count;
@@ -78,17 +94,16 @@ char	**ft_strsplit(char *str, char *charset)
 	i = 0;
 	while (*str != '\0')
 	{
-		word_len = get_word_len(str, charset);
-		if (word_len > 0)
+		result[i] = try_create_word(str, charset, &word_len);
+		if (result[i] == NULL)
 		{
-			result[i] = malloc(word_len + 1);
-			ft_strncpy(result[i], str, word_len);
-			*(result[i] + word_len) = '\0';
 			str += word_len;
 			i++;
 		}
 		else
+		{
 			str += 1;
+		}
 	}
 	result[i] = 0;
 	return (result);

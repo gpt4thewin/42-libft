@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 00:06:17 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 00:06:17 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:05:22 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (ft_isupper(c))
 	{

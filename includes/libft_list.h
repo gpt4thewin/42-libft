@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 18:15:23 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 18:15:23 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:27:39 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_LIST_H
 
 /*
-*	Types.
+**	Types.
 */
 
 typedef struct s_list	t_list;
@@ -26,7 +26,7 @@ struct	s_list
 };
 
 /*
-*	Standard functions.
+**	Standard functions.
 */
 
 t_list	*ft_create_elem(void *data);
@@ -52,7 +52,7 @@ void	ft_sorted_list_merge(t_list **begin_list1,
 								int (*cmp)());
 
 /*
-*	Non standard functions.
+**	Non standard functions.
 */
 
 void	ft_list_swap(t_list **begin_list, t_list *previous, t_list *current);

@@ -6,9 +6,9 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 17:15:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 17:15:06 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:09:32 by juazouz          ###   ########.fr       */
 /*                                                                            */
-/* **********0**************************************************************** */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -41,7 +41,7 @@ static void	putnbr(int nb, char *s, int *len)
 	append(tmp % 10 + '0', s, len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 	int		len;

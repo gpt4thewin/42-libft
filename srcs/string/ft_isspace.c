@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/26 19:25:24 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 19:25:24 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 16:27:56 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
 	return (c == ' ' || c == '\t' || c == '\r' || c == '\v' || c == '\n');
 }

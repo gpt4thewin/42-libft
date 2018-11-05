@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:57:19 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/16 23:57:19 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 16:27:03 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return ((char)c > 0);
 }

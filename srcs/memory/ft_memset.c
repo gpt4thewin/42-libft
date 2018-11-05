@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/16 18:38:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/16 18:38:06 by juazouz          ###   ########.fr       */
+/*   Created: 2018/11/05 15:38:59 by juazouz           #+#    #+#             */
+/*   Updated: 2018/11/05 17:12:35 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *ptr, int value, size_t num)
+void	*ft_memset(void *ptr, int value, size_t num)
 {
 	size_t	i;
 
@@ -22,6 +22,5 @@ void *ft_memset(void *ptr, int value, size_t num)
 		((unsigned char*)ptr)[i] = (unsigned char)value;
 		i++;
 	}
-
 	return (ptr);
 }

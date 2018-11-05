@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:10:14 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/17 01:10:14 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/05 17:06:45 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	trimlen(char const *s)
 	return (len);
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	int		len;
 	int		i;
@@ -56,6 +56,5 @@ char	*ft_strtrim(char const *s)
 	i = 0;
 	i += ntoskip(s);
 	ft_strncpy(result, (char*)(s + i), len);
-
 	return (result);
 }
