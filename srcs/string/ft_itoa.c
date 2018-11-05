@@ -16,7 +16,7 @@ static void	append(char c, char *s, int *len)
 {
 	if (s != NULL)
 	{
-		(*s)[len] = c;
+		s[*len] = c;
 		(*len)++;
 	}
 }
