@@ -54,7 +54,6 @@ SRC =	srcs/string/ft_atoi.c \
 		srcs/string/ft_strtrim.c \
 		srcs/string/ft_tolower.c \
 		srcs/string/ft_toupper.c \
-		srcs/string/ft_strtok.c \
 		srcs/memory/ft_memalloc.c \
 		srcs/memory/ft_memccpy.c \
 		srcs/memory/ft_memchr.c \
@@ -145,7 +144,6 @@ OBJ =	ft_atoi.o \
 		ft_strtrim.o \
 		ft_tolower.o \
 		ft_toupper.o \
-		ft_strtok.o \
 		ft_create_elem.o \
 		ft_list_at.o \
 		ft_list_clear.o \
