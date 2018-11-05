@@ -24,6 +24,7 @@ SRC =	srcs/string/ft_atoi.c \
 		srcs/string/ft_islower.c \
 		srcs/string/ft_isprint.c \
 		srcs/string/ft_isupper.c \
+		srcs/string/ft_isspace.c \
 		srcs/string/ft_itoa.c \
 		srcs/string/ft_strcat.c \
 		srcs/string/ft_strchr.c \
@@ -98,6 +99,7 @@ OBJ =	ft_atoi.o \
 		ft_islower.o \
 		ft_isprint.o \
 		ft_isupper.o \
+		ft_isspace.o \
 		ft_itoa.o \
  		ft_memalloc.o \
 		ft_memccpy.o \
