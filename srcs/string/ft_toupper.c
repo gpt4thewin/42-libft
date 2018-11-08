@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 00:10:31 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 17:05:36 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/08 18:48:37 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 	{
-		return ((char)c + ('a' - 'A'));
+		return ((char)c + 'A' - 'a');
 	}
 	return (c);
 }
