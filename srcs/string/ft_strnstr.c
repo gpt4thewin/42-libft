@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:30:23 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:38:38 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/08 18:17:16 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	little_len;
+	size_t	big_len;
+	size_t	little_len;
+	size_t	i;
 
+	big_len = ft_strlen((char*)big);
 	little_len = ft_strlen((char*)little);
 	if (little_len == 0)
 	{
 		return ((char*)big);
 	}
-	while (*big)
+	i = 0;
+	while (big[i] && i + little_len <= len)
 	{
-		if (!ft_strncmp((char*)big, (char*)little, len))
+		if (!ft_strncmp((char*)big + i, (char*)little, little_len))
 		{
-			return ((char*)big);
+			return ((char*)big + i);
 		}
-		big++;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
