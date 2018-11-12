@@ -16,6 +16,10 @@ FLAGS = -Wall -Wextra -Werror -I includes
 
 TARGET = libft.a
 
+OBJ =	$(patsubst %.c,%.o,$(notdir $(SRC)))
+
+MKDIR_P = mkdir -p
+
 SRC =	srcs/string/ft_atoi.c \
 		srcs/string/ft_isalnum.c \
 		srcs/string/ft_isalpha.c \
@@ -89,81 +93,9 @@ SRC =	srcs/string/ft_atoi.c \
 		srcs/list/ft_sorted_list_insert.c \
 		srcs/list/ft_sorted_list_merge.c
 
-OBJ =	ft_atoi.o \
-		ft_bzero.o \
-		ft_isalnum.o \
-		ft_isalpha.o \
-		ft_isascii.o \
-		ft_isdigit.o \
-		ft_islower.o \
-		ft_isprint.o \
-		ft_isupper.o \
-		ft_isspace.o \
-		ft_itoa.o \
- 		ft_memalloc.o \
-		ft_memccpy.o \
-		ft_memchr.o \
-		ft_memcmp.o \
-		ft_memcpy.o \
-		ft_memdel.o \
-		ft_memmove.o \
-		ft_memset.o \
-		ft_putchar.o \
-		ft_putchar_fd.o \
-		ft_putendl.o \
-		ft_putendl_fd.o \
-		ft_putnbr.o \
-		ft_putnbr_fd.o \
-		ft_putstr.o \
-		ft_putstr_fd.o \
-		ft_strcat.o \
-		ft_strchr.o \
-		ft_strclr.o \
-		ft_strcmp.o \
-		ft_strcpy.o \
-		ft_strdel.o \
-		ft_strdup.o \
-		ft_strequ.o \
-		ft_striter.o \
-		ft_striteri.o \
-		ft_strjoin.o \
-		ft_strlcat.o \
-		ft_strlen.o \
-		ft_strmap.o \
-		ft_strmapi.o \
-		ft_strncat.o \
-		ft_strncmp.o \
-		ft_strncpy.o \
-		ft_strnequ.o \
-		ft_strnew.o \
-		ft_strnstr.o \
-		ft_strrchr.o \
-		ft_strsplit.o \
-		ft_strstr.o \
-		ft_strsub.o \
-		ft_strtrim.o \
-		ft_tolower.o \
-		ft_toupper.o \
-		ft_create_elem.o \
-		ft_list_at.o \
-		ft_list_clear.o \
-		ft_list_find.o \
-		ft_list_foreach.o \
-		ft_list_foreach_if.o \
-		ft_list_last.o \
-		ft_list_merge.o \
-		ft_list_push_back.o \
-		ft_list_push_front.o \
-		ft_list_remove_if.o \
-		ft_list_reverse.o \
-		ft_list_size.o \
-		ft_list_sort.o \
-		ft_list_swap.o \
-		ft_sorted_list_insert.o \
-		ft_sorted_list_merge.o
+.PHONY: directories
 
-
-$(TARGET):
+$(TARGET): directories
 	$(CC) $(FLAGS) -c $(SRC)
 	ar rc $(TARGET) $(OBJ)
 	ranlib $(TARGET)
