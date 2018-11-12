@@ -6,17 +6,16 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 17:14:32 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 18:06:36 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
+# include <string.h>
 
 /*
 **	Types.
