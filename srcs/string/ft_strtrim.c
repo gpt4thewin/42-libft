@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:10:14 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 17:06:45 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 17:07:26 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,44 +17,44 @@ static int	isblank(int c)
 	return (c == '\n' || c == ' ' || c == '\t');
 }
 
-static int	ntoskip(char const *s)
+static int	start_pos(char const *s)
 {
 	int		n;
 
 	n = 0;
-	while (isblank(*s))
+	while (isblank(s[n]))
 		n++;
 	return (n);
 }
 
-static int	trimlen(char const *s)
+static int	end_pos(char const *s, int len)
 {
 	int		i;
-	int		len;
 
-	i = 0;
-	len = 0;
-	i += ntoskip(s);
-	while ((*s) + i && !isblank((*s) + i))
+	i = len - 1;
+	while (i >= 0 && isblank(s[i]))
 	{
-		len++;
-		i++;
+		i--;
 	}
-	return (len);
+	return (i);
 }
 
 char		*ft_strtrim(char const *s)
 {
+	int		start;
+	int		end;
 	int		len;
-	int		i;
 	char	*result;
 
-	len = trimlen(s);
+	start = start_pos(s);
+	end = end_pos(s, ft_strlen((char*)s));
+	len = end - start + 1;
+	if (0 >= len)
+		len = 0;
 	result = malloc(len + 1);
 	if (result == NULL)
 		return (NULL);
-	i = 0;
-	i += ntoskip(s);
-	ft_strncpy(result, (char*)(s + i), len);
+	ft_strncpy(result, (char*)(s + start), len);
+	result[len] = '\0';
 	return (result);
 }

@@ -6,41 +6,25 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:32:36 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 17:10:50 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 17:25:04 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		contains(char c, char *charset)
+static int		get_word_len(char *str, char separator)
 {
 	int i;
 
 	i = 0;
-	while (charset[i] != '\0')
-	{
-		if (c == charset[i])
-		{
-			return (1);
-		}
-		i++;
-	}
-	return (0);
-}
-
-static int		get_word_len(char *str, char *charset)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != 0 && !contains(str[i], charset))
+	while (str[i] != 0 && str[i] != separator)
 	{
 		i++;
 	}
 	return (i);
 }
 
-static int		get_word_count(char *str, char *charset)
+static int		get_word_count(char *str, char separator)
 {
 	int word_len;
 	int n;
@@ -50,7 +34,7 @@ static int		get_word_count(char *str, char *charset)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		word_len = get_word_len(str, charset);
+		word_len = get_word_len(str + i, separator);
 		if (word_len > 0)
 		{
 			n++;
@@ -61,14 +45,14 @@ static int		get_word_count(char *str, char *charset)
 			i++;
 		}
 	}
-	return (i);
+	return (n);
 }
 
-static char		*try_create_word(char *str, char *charset, int *word_len)
+static char		*try_create_word(char *str, char separator, int *word_len)
 {
 	char	*result;
 
-	*word_len = get_word_len(str, charset);
+	*word_len = get_word_len(str, separator);
 	if (*word_len > 0)
 	{
 		result = malloc(*word_len + 1);
@@ -80,22 +64,22 @@ static char		*try_create_word(char *str, char *charset, int *word_len)
 	return (NULL);
 }
 
-char			**ft_strsplit(char *str, char *charset)
+char			**ft_strsplit(char *str, char separator)
 {
 	int		i;
 	int		word_count;
 	int		word_len;
 	char	**result;
 
-	word_count = get_word_count(str, charset);
+	word_count = get_word_count(str, separator);
 	result = malloc(sizeof(char*) * (word_count + 1));
 	if (result == NULL)
 		return (NULL);
 	i = 0;
 	while (*str != '\0')
 	{
-		result[i] = try_create_word(str, charset, &word_len);
-		if (result[i] == NULL)
+		result[i] = try_create_word(str, separator, &word_len);
+		if (result[i] != NULL)
 		{
 			str += word_len;
 			i++;

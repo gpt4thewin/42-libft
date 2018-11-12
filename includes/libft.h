@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 17:27:23 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 17:14:32 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,6 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const *s);
-char			**ft_strsplit(char *str, char *charset);
+char			**ft_strsplit(char *str, char c);
 
 #endif

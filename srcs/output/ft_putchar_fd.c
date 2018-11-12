@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 17:40:39 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:13:46 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 17:38:40 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	// char	buff[2];
+	c &= 0x7FFFFFFF;
 	write(fd, &c, 1);
 }
