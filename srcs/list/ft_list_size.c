@@ -6,11 +6,11 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 14:20:37 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 18:16:34 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 19:17:46 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_list.h"
+#include "libft.h"
 
 int	ft_list_size(t_list *begin_list)
 {

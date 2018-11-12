@@ -6,12 +6,12 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 14:29:20 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/26 18:16:34 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 19:17:46 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_list.h"
+#include "libft.h"
 
 void	ft_list_clear(t_list **begin_list)
 {

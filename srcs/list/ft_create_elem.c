@@ -6,12 +6,12 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 13:45:22 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/29 13:27:00 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 19:17:46 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft_list.h"
+#include "libft.h"
 
 t_list	*ft_create_elem(void *data)
 {
