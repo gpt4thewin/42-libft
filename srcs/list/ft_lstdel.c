@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_clear.c                                    :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/16 14:29:20 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 19:17:46 by juazouz          ###   ########.fr       */
+/*   Created: 2018/11/12 19:47:48 by juazouz           #+#    #+#             */
+/*   Updated: 2018/11/12 20:26:40 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-void	ft_list_clear(t_list **begin_list)
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list	*current;
-	t_list	*next;
+	t_list	**curr;
+	t_list	**next;
 
-	current = *begin_list;
-	while (current)
+	curr = alst;
+	while ((*curr) != NULL)
 	{
-		next = current->next;
-		free(current);
-		current = next;
+		next = &(*curr)->next;
+		ft_lstdelone(curr, del);
+		*curr = NULL;
+		curr = next;
 	}
-	(*begin_list) = 0;
 }

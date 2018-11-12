@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 19:16:35 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/12 20:27:32 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@
 
 typedef struct	s_list
 {
+	void			*content;
+	size_t			content_size;
 	struct s_list	*next;
-	void			*data;
 }				t_list;
 
 /*
@@ -114,31 +115,11 @@ char			**ft_strsplit(char *str, char c);
 **	List functions.
 */
 
-t_list			*ft_create_elem(void *data);
-t_list			*ft_list_at(t_list *begin, unsigned int nbr);
-t_list			*ft_list_last(t_list *begin);
-void			ft_list_clear(t_list **begin);
-void			ft_list_merge(t_list **begin1, t_list *begin2);
-void			ft_list_push_back(t_list **begin, void *data);
-void			ft_list_push_front(t_list **begin, void *data);
-t_list			*ft_list_find(t_list *begin, void *data_ref, int (*cmp)());
-void			ft_list_foreach(t_list *begin, void (*f)(void *));
-void			ft_list_foreach_if(t_list *begin,
-							void (*f)(void*),
-							void *data_ref,
-							int (*cmp)(void*, void*));
-void			ft_list_remove_if(t_list **begin, void *data_ref, int (*cmp)());
-void			ft_list_reverse(t_list **begin);
-int				ft_list_size(t_list *begin);
-void			ft_list_sort(t_list **begin, int (*cmp)());
-void			ft_sorted_list_insert(t_list **begin, void *data, int (*cmp)());
-void			ft_sorted_list_merge(t_list **begin1,
-								t_list *begin2,
-								int (*cmp)());
-/*
-**	Custom list functions.
-*/
-
-void			ft_list_swap(t_list **begin, t_list *previous, t_list *current);
+t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void			ft_lstdel(t_list **alst, void (*del)(void*, size_t));
+void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
