@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/16 18:47:41 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:08:20 by juazouz          ###   ########.fr       */
+/*   Created: 2018/11/12 19:53:12 by juazouz           #+#    #+#             */
+/*   Updated: 2018/11/13 15:00:11 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int n)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	ft_memset(s, 0, n);
+	new->next = *alst;
+	*alst = new;
 }
