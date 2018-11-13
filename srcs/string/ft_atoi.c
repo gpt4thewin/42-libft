@@ -6,12 +6,11 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 14:20:31 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/13 13:52:00 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 13:56:12 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	get_sign(char *str, int *i)
 {
