@@ -92,7 +92,7 @@ SRC =	srcs/string/ft_atoi.c \
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $@ $^
+	ar rcs $@ $^
 
 $(ODIR)/%.o: srcs/%.c $(DEPS)
 	@mkdir -p $(dir $@)
