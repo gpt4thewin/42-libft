@@ -12,13 +12,20 @@
 
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror -I includes
+CFLAGS = -Wall -Wextra -Werror -I $(IDIR)
 
-TARGET = libft.a
+NAME = libft.a
 
-OBJ =	$(patsubst %.c,%.o,$(notdir $(SRC)))
+ODIR = obj
+IDIR = includes
+SDIR = srcs
 
-MKDIR_P = mkdir -p
+_DEPS = libft.h
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+OBJ = $(patsubst $(SDIR)/%.c,$(ODIR)/%.o,$(SRC))
+
+HEADERS = includes/libft.h
 
 SRC =	srcs/string/ft_atoi.c \
 		srcs/string/ft_isalnum.c \
@@ -75,37 +82,26 @@ SRC =	srcs/string/ft_atoi.c \
 		srcs/output/ft_putnbr_fd.c \
 		srcs/output/ft_putstr.c \
 		srcs/output/ft_putstr_fd.c \
-		srcs/list/ft_create_elem.c \
-		srcs/list/ft_list_at.c \
-		srcs/list/ft_list_clear.c \
-		srcs/list/ft_list_find.c \
-		srcs/list/ft_list_foreach.c \
-		srcs/list/ft_list_foreach_if.c \
-		srcs/list/ft_list_last.c \
-		srcs/list/ft_list_merge.c \
-		srcs/list/ft_list_push_back.c \
-		srcs/list/ft_list_push_front.c \
-		srcs/list/ft_list_remove_if.c \
-		srcs/list/ft_list_reverse.c \
-		srcs/list/ft_list_size.c \
-		srcs/list/ft_list_sort.c \
-		srcs/list/ft_list_swap.c \
-		srcs/list/ft_sorted_list_insert.c \
-		srcs/list/ft_sorted_list_merge.c
+		srcs/list/ft_lstadd.c \
+		srcs/list/ft_lstdel.c \
+		srcs/list/ft_lstdelone.c \
+		srcs/list/ft_lstiter.c \
+		srcs/list/ft_lstmap.c \
+		srcs/list/ft_lstnew.c
 
-.PHONY: directories
+all: $(NAME)
 
-$(TARGET): directories
-	$(CC) $(FLAGS) -c $(SRC)
-	ar rc $(TARGET) $(OBJ)
-	ranlib $(TARGET)
+$(NAME): $(OBJ)
+	ar rc $@ $^
 
-all: $(TARGET)
+$(ODIR)/%.o: srcs/%.c $(DEPS)
+	@mkdir -p $(dir $@)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 clean:
 	rm -f $(OBJ)
 
 fclean:	clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 re:	fclean all
