@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 14:20:31 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 15:59:40 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 13:52:00 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static int	get_sign(char *str, int *i)
 
 int			ft_atoi(char *str)
 {
-	int		digit;
 	long	result;
 	int		i;
 	int		sign;
@@ -43,10 +42,13 @@ int			ft_atoi(char *str)
 	while (str[i] != '\0' && ft_isdigit(str[i]))
 	{
 		result *= 10;
-		digit = str[i] - '0';
-		result += digit;
+		result += str[i] - '0';
 		if (result < 0)
-			return (-1);
+		{
+			if (sign == 1)
+				return (-1);
+			return (0);
+		}
 		i++;
 	}
 	return (sign * result);
