@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/13 15:00:24 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:21:17 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,10 @@ int				ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 **	String.
 */
 
-int				ft_strlen(char *str);
+size_t			ft_strlen(char *str);
 char			*ft_strcpy(char *dest, char *src);
 char			*ft_strncpy(char *dest, char *src, unsigned int n);
+int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strdup(char *src);
 char			*ft_strcat(char *dest, char *src);
@@ -83,8 +84,13 @@ int				ft_isupper(int c);
 int				ft_isalnum(int c);
 int				ft_isprint(int c);
 int				ft_isspace(int c);
+int				ft_isascii(int c);
+
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 
 int				ft_atoi(char *str);
+char			*ft_itoa(int n);
 
 char			**ft_strtok(char *str, char *delimiter);
 

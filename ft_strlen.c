@@ -6,11 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 21:08:47 by juazouz           #+#    #+#             */
-/*   Updated: 2018/08/11 10:11:41 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/15 12:16:48 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int n;
 
