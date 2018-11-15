@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 00:38:47 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 16:13:53 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:29:35 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 	int		len;
 
+	if (s == NULL)
+		return (NULL);
 	len = ft_strlen((char*)s);
 	result = malloc(len + 1);
 	if (result == NULL)

@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 00:27:07 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 16:06:34 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:59:43 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_strclr(char *s)
 {
 	int	i;
 
+	if (s == NULL)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

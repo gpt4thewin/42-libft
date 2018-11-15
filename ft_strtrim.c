@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:10:14 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 17:07:26 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:33:21 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ char		*ft_strtrim(char const *s)
 	int		len;
 	char	*result;
 
+	if (s == NULL)
+		return (NULL);
 	start = start_pos(s);
 	end = end_pos(s, ft_strlen((char*)s));
 	len = end - start + 1;

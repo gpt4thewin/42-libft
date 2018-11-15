@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:04:52 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:37:47 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:30:58 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*result;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	len1 = ft_strlen((char*)s1);
 	len2 = ft_strlen((char*)s2);
 	result = malloc(len1 + len2 + 1);

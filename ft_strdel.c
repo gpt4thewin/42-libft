@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 17:05:53 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:37:12 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:26:31 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (*as != NULL)
+	if (as != NULL && *as != NULL)
 	{
 		free(*as);
 		*as = NULL;

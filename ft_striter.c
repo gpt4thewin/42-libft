@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 00:32:20 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/05 16:37:34 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:41:34 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

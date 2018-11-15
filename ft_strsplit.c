@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:32:36 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/12 17:25:04 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/13 15:32:30 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ char			**ft_strsplit(char *str, char separator)
 	int		word_len;
 	char	**result;
 
+	if (str == NULL)
+		return (NULL);
 	word_count = get_word_count(str, separator);
 	result = malloc(sizeof(char*) * (word_count + 1));
 	if (result == NULL)
@@ -85,9 +87,7 @@ char			**ft_strsplit(char *str, char separator)
 			i++;
 		}
 		else
-		{
 			str += 1;
-		}
 	}
 	result[i] = 0;
 	return (result);
