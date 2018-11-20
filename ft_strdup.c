@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/12 18:43:25 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/08 16:01:40 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/20 15:57:02 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(char const *src)
 {
 	char	*result;
 	int		len;

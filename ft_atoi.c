@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 14:20:31 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/13 14:41:26 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/20 15:56:47 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_sign(char *str, int *i)
+static int	get_sign(char const *str, int *i)
 {
 	if (str[(*i)] == '-')
 	{
@@ -26,7 +26,7 @@ static int	get_sign(char *str, int *i)
 	return (1);
 }
 
-int			ft_atoi(char *str)
+int			ft_atoi(char const *str)
 {
 	long	result;
 	int		i;

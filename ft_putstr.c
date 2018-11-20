@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/02 20:32:22 by juazouz           #+#    #+#             */
-/*   Updated: 2018/10/29 13:14:19 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/20 16:01:47 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(const char *str)
 {
 	ft_putstr_fd(str, 1);
 }

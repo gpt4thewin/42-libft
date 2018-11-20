@@ -6,13 +6,13 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/17 01:32:36 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/13 15:32:30 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/20 15:59:11 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_word_len(char *str, char separator)
+static int		get_word_len(char const *str, char separator)
 {
 	int i;
 
@@ -24,7 +24,7 @@ static int		get_word_len(char *str, char separator)
 	return (i);
 }
 
-static int		get_word_count(char *str, char separator)
+static int		get_word_count(char const *str, char separator)
 {
 	int word_len;
 	int n;
@@ -48,7 +48,7 @@ static int		get_word_count(char *str, char separator)
 	return (n);
 }
 
-static char		*try_create_word(char *str, char separator, int *word_len)
+static char		*try_create_word(char const *str, char separator, int *word_len)
 {
 	char	*result;
 
@@ -64,7 +64,7 @@ static char		*try_create_word(char *str, char separator, int *word_len)
 	return (NULL);
 }
 
-char			**ft_strsplit(char *str, char separator)
+char			**ft_strsplit(char const *str, char separator)
 {
 	int		i;
 	int		word_count;
