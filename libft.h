@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/20 16:23:05 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/20 16:32:25 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,15 @@ void			ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+**	Linq-like functions.
+*/
+
+void			ft_foreach(void *ptr, int size, int step, void (f)(void*));
+int				ft_any(void *ptr, int size, int step, int (f)(void*));
+int				ft_all(void *ptr, int size, int step, int (f)(void*));
+int				ft_min(int *ptr, int size);
+int				ft_max(int *ptr, int size);
 
 #endif

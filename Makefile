@@ -80,7 +80,12 @@ SRC =	ft_atoi.c \
 		ft_lstdelone.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
-		ft_lstnew.c
+		ft_lstnew.c \
+		ft_foreach.c \
+		ft_all.c \
+		ft_any.c \
+		ft_min.c \
+		ft_max.c
 
 all: $(NAME)
 
