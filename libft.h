@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/20 16:32:25 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/11/22 13:28:11 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,6 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
-
-/*
-**	Macros.
-*/
-
-# define ABS(n) ((n) > 0 ? (n) : -(n))
 
 /*
 **	Output.
