@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/11/22 13:28:11 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/17 13:20:20 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,5 +128,11 @@ int				ft_any(void *ptr, int size, int step, int (f)(void*));
 int				ft_all(void *ptr, int size, int step, int (f)(void*));
 int				ft_min(int *ptr, int size);
 int				ft_max(int *ptr, int size);
+
+/*
+**	Math.
+*/
+
+double			ft_powf(double num, int e);
 
 #endif
