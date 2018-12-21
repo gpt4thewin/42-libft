@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/12/17 13:20:20 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/21 15:48:41 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@
 **	Types.
 */
 
+typedef enum	e_bool
+{
+	false,
+	true
+}				t_bool;
+
 typedef struct	s_list
 {
 	void			*content;
@@ -32,6 +38,7 @@ typedef struct	s_list
 **	Output.
 */
 
+int				ft_printf(const char *format, ...);
 void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr(char const *s);
