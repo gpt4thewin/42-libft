@@ -6,7 +6,7 @@
 #    By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/17 17:47:32 by juazouz           #+#    #+#              #
-#    Updated: 2018/12/28 15:42:04 by juazouz          ###   ########.fr        #
+#    Updated: 2018/12/28 15:42:26 by juazouz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ ODIR = obj
 
 OBJ = $(patsubst %.c,$(ODIR)/%.o,$(SRC))
 SRC =	$(_SRC) \
-		$(addprefix output/ft_printf/,$(_SRC_FTPRINTF))
+		$(addprefix output/ft_printf/,$(_SRC_FTFPRINTF))
 
 _SRC =	./char/ft_isalnum.c \
 		./char/ft_isalpha.c \
@@ -97,7 +97,8 @@ _SRC =	./char/ft_isalnum.c \
 		./input/get_next_line.c \
 		./math/ft_powf.c
 
-_SRC_FTPRINTF =	./core/ft_printf.c \
+_SRC_FTFPRINTF =
+				./core/ft_fprintf.c \
 				./core/print_argument.c \
 				./parse/parse.c \
 				./parse/parse_flags.c \

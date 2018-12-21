@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 11:27:18 by juazouz           #+#    #+#             */
-/*   Updated: 2018/12/21 15:48:33 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/21 17:20:56 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 **	Core.
 */
 
-int			print_argument(t_formatinfo *formatinfo, va_list ap);
+int			print_argument(int fd, t_formatinfo *formatinfo, va_list ap);
 void		print_number_generic(t_formatinfo *info,
 										va_list ap,
 										char *base,

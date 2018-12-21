@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 15:31:31 by juazouz           #+#    #+#             */
-/*   Updated: 2018/12/14 13:42:58 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/21 17:20:34 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	print_space_padding(t_formatinfo *formatinfo,
 **	Returns the number of printed characters.
 */
 
-int			print_argument(t_formatinfo *formatinfo, va_list ap)
+int			print_argument(int fd, t_formatinfo *formatinfo, va_list ap)
 {
 	void		(*print_func)(t_formatinfo*, va_list, t_output*);
 	t_output	output;
@@ -70,7 +70,7 @@ int			print_argument(t_formatinfo *formatinfo, va_list ap)
 	print_func(formatinfo, ap, &output);
 	output_size = output.size;
 	out_init(&output);
-	output.fd = STDOUT_FILENO;
+	output.fd = fd;
 	if (formatinfo->flags & FLAG_MINUS)
 	{
 		print_func(formatinfo, ap2, &output);
