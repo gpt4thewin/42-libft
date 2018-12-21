@@ -6,13 +6,13 @@
 #    By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/17 17:47:32 by juazouz           #+#    #+#              #
-#    Updated: 2018/12/28 15:42:26 by juazouz          ###   ########.fr        #
+#    Updated: 2018/12/28 15:42:39 by juazouz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I $(IDIR)
+CFLAGS = -Wall -Wextra -Werror -I $(IDIR) -g
 
 NAME = libft.a
 
@@ -97,7 +97,7 @@ _SRC =	./char/ft_isalnum.c \
 		./input/get_next_line.c \
 		./math/ft_powf.c
 
-_SRC_FTFPRINTF =
+_SRC_FTFPRINTF = \
 				./core/ft_fprintf.c \
 				./core/print_argument.c \
 				./parse/parse.c \

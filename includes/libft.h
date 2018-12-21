@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/16 23:18:06 by juazouz           #+#    #+#             */
-/*   Updated: 2018/12/28 15:40:56 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/28 15:42:46 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct	s_list
 */
 
 int				ft_printf(const char *format, ...);
+int				ft_fprintf(int fd, const char *format, ...);
 void			ft_putchar(char c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr(char const *s);

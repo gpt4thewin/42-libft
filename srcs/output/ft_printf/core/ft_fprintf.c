@@ -6,7 +6,7 @@
 /*   By: juazouz <juazouz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 15:05:30 by juazouz           #+#    #+#             */
-/*   Updated: 2018/12/21 17:24:33 by juazouz          ###   ########.fr       */
+/*   Updated: 2018/12/21 17:44:38 by juazouz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,11 @@ static int	parse_and_print_argument(int fd,
 	return (print_argument(fd, &formatinfo, ap));
 }
 
-int			ft_fprintf(int fd, const char *restrict format, ...)
+static int	ft_fprintf_core(int fd, const char *restrict format, va_list ap)
 {
-	va_list	ap;
 	int		output_size;
 	int		pos;
 
-	va_start(ap, format);
 	pos = 0;
 	output_size = 0;
 	while (format[pos] != '\0')
@@ -48,11 +46,27 @@ int			ft_fprintf(int fd, const char *restrict format, ...)
 		}
 		else
 		{
-			ft_putchar(format[pos]);
+			ft_putchar_fd(format[pos], fd);
 			pos++;
 			output_size++;
 		}
 	}
 	va_end(ap);
 	return (output_size);
+}
+
+int			ft_printf(const char *restrict format, ...)
+{
+	va_list	ap;
+
+	va_start(ap, format);
+	return (ft_fprintf_core(STDOUT_FILENO, format, ap));
+}
+
+int			ft_fprintf(int fd, const char *restrict format, ...)
+{
+	va_list	ap;
+
+	va_start(ap, format);
+	return (ft_fprintf_core(fd, format, ap));
 }
